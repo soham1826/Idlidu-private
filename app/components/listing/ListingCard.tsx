@@ -50,7 +50,6 @@ const ListingCard:React.FC<ListingCardProps> = ({data,onAction,disabled,actionLa
 
             </div>
             <div className="font-bold text-lg text-blue-500 pl-2">{data.title}</div>
-            <div className="font-semibold text-md text-slate-500 pl-2 ">{data.artistFirstName}</div>
             <div className="font-semibold text-lg pl-2">{location?.region} , {location?.label}</div>
             <div className="font-semibold text-lg my-2 p-2 bg-slate-200 rounded-md">₹ {data.price}/Hour</div>
         </div>
