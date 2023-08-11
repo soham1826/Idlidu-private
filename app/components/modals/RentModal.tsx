@@ -51,6 +51,8 @@ const RentModal =()=>{
             phoneNo:"",
             price:"",
             title:"",
+            artistFirstName:"",
+            artistLastName:"",
             description:"",
             skills:""
 
@@ -184,7 +186,6 @@ const RentModal =()=>{
             <Input id="title" label="Title" disabled={isLoading} register={register} errors={errors} required/>
             <hr/>
             <Input id="description" label="Description" disabled={isLoading} register={register} errors={errors} required/>
-
             </div>
         )
     }

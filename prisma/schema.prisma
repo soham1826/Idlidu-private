@@ -49,6 +49,8 @@ model Account{
 model Listing{
   id String @id @default(auto()) @map("_id")@db.ObjectId
   title String
+  // artistFirstName String?
+  // artistLastName String?
   description String
   imageSrc String
   videoSrc String?

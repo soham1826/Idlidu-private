@@ -24,7 +24,7 @@ function EmptyState({
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className="h-screen flex flex-col gap-2 justify-center items-center"
+      className="h-[45rem] flex flex-col gap-2 justify-center items-center"
     >
       <Heading center title={title} subtitle={subtitle} />
       <div className="w-48 mt-4">

@@ -2,7 +2,7 @@
 import { AiOutlineMenu } from "react-icons/ai";
 import Avatar from "../Avatar";
 import MenuItem from "./MenuItem";
-// import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 
 import {useState,useCallback} from "react";
@@ -26,7 +26,7 @@ interface UserMenuProps{
         const loginModal = useLoginModal();
         const rentModal = useRentModal();
         const [isOpen, setIsOpen] = useState(false);
-        // const router = useRouter();
+        const router = useRouter();
 
         const toggleOpen = useCallback(
             () =>{
@@ -118,12 +118,7 @@ interface UserMenuProps{
               />
               <MenuItem 
                 label="My Favourites" 
-                onClick={()=>{}}
-              />
-
-              <MenuItem 
-                label="My Impressions" 
-                onClick={()=>{}}
+                onClick={()=>router.push("/favourites")}
               />
 
               <MenuItem 
