@@ -22,8 +22,8 @@ enum STEPS {
     IMAGES =2,
     // VIDEOS =3,
     DESCRIPTION =3,
-    // SKILLS = 5,
     PRICE = 4,
+    CONTACT = 5,
     // CONTACT= 7,
 }
 
@@ -65,6 +65,7 @@ const RentModal =()=>{
     const imageSrc =watch("imageSrc")
 
 
+
     const Map = useMemo(
         () =>
           dynamic(() => import("../Map"), {
@@ -91,7 +92,7 @@ const RentModal =()=>{
     }
 
     const onSubmit:SubmitHandler<FieldValues> = (data)=>{
-        if(step!== STEPS.PRICE){
+        if(step!== STEPS.CONTACT){
             return onNext();
         }
         setIsloading(true)
@@ -112,7 +113,7 @@ const RentModal =()=>{
     }
 
     const actionLabel = useMemo(()=>{
-        if(step === STEPS.PRICE){
+        if(step === STEPS.CONTACT){
             return "Create"
         }
 
@@ -195,6 +196,19 @@ const RentModal =()=>{
             <div className="flex flex-col gap-8">
                 <Heading title="Set your price" subtitle="How much do you charge per hour ?"/>
             <Input id="price" label="Price" type="number" disabled={isLoading} register={register} errors={errors} formatPrice required/>
+
+            </div>
+        )
+    }
+
+    if(step === STEPS.CONTACT){
+        bodyContent = (
+            <div className="flex flex-col gap-8">
+                <Heading title="Your Contact info" subtitle="Makes Customers to contact you effortlessly"/>
+            <Input id="artistFirstName" label="First Name" disabled={isLoading} register={register} errors={errors} required/>
+            <Input id="artistLastName" label="Last Name" disabled={isLoading} register={register} errors={errors} required/>
+            
+            <Input id="phoneNo" label="Phone No" disabled={isLoading} register={register} errors={errors} required/>
 
             </div>
         )

@@ -49,8 +49,8 @@ model Account{
 model Listing{
   id String @id @default(auto()) @map("_id")@db.ObjectId
   title String
-  // artistFirstName String?
-  // artistLastName String?
+  artistFirstName String
+  artistLastName String
   description String
   imageSrc String
   videoSrc String?
@@ -58,7 +58,7 @@ model Listing{
   createdAt DateTime @default(now())
   category  String
   locationValue String
-  phoneNo String?
+  phoneNo String
   price Int
   userId String @db.ObjectId
 

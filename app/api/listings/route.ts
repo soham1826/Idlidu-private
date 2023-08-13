@@ -17,6 +17,9 @@ export async function POST(request: Request) {
     category,
     location,
     price,
+    phoneNo,
+    artistFirstName,
+    artistLastName,
   } = body;
 
   const listen = await prisma.listing.create({
@@ -26,7 +29,10 @@ export async function POST(request: Request) {
       imageSrc,
       category,
       locationValue: location.value,
+      phoneNo,
       price: parseInt(price, 10),
+      artistFirstName,
+      artistLastName,
       userId: currentUser.id,
     },
   });
