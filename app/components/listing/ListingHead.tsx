@@ -19,6 +19,7 @@ const ListingHead:React.FC<ListingHeadProps> =({title,locationValue,imageSrc,id,
     return (
     
         <div className="pt-12 mt-8">
+            
             <Heading title={title} subtitle={`${location?.region},${location?.label}`}/>
             <div className="w-full h-[30vh] lg:h-[60vh] overflow-hidden rounded-xl relative mt-2"> 
             <Image fill src={imageSrc} alt={title} className="object-cover w-full "/>
