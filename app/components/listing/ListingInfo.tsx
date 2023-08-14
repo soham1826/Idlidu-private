@@ -5,17 +5,13 @@ import { IconType } from "react-icons"
 import Avatar from "../Avatar";
 import ListingCategory from "./ListingCategory";
 import dynamic from "next/dynamic";
-import Button from "../Button";
-import useLoginModal from "@/app/hooks/useLoginModal";
-import { BiLogoWhatsapp } from "react-icons/bi";
-import { BsFilePerson } from "react-icons/bs";
+
 
 const Map = dynamic(()=>import("../Map"))
 
 
 interface ListingInfoProps{
     user:SafeUser;
-    currentUser?:SafeUser|null;
     description:string;
     category:{
         icon:IconType;
@@ -23,33 +19,28 @@ interface ListingInfoProps{
         description:string
     }|undefined
     locationValue:string;
-    phone:string;
-    artistFirstName:string;
-    artistLastName:string
+    price:number
 }
 
 const ListingInfo:React.FC<ListingInfoProps>= ({
     user,
-    currentUser,
     description,
     category,
     locationValue,
-    phone,
-    artistFirstName,
-    artistLastName
+    price
 }) => {
     const {getByValue} = useCountries();
     const coordinates = getByValue(locationValue)?.latlng;
-    const loginModal = useLoginModal();
     
   return (
-    <div className="col-span-8 flex flex-col gap-8">
+    <div className="col-span-4 flex flex-col gap-8">
         <div className="flex flex-col gap-2 p-2">
             <div className="text-xl font-semibold flex flex-row items-center gap-3">
                 <div>Listed by {user?.name} </div>
                 <Avatar src={user?.image}/>
             </div>
             <div className="text-neutral-500">User since {user?.createdAt.slice(0,4)}</div>
+            <div className="w-1/2 font-semibold rounded-md border border-neutral-200 p-3 shadow-md">₹ {price}/Hour</div>
         </div>
         <hr/>
         {category && (
@@ -66,18 +57,9 @@ const ListingInfo:React.FC<ListingInfoProps>= ({
             <h2 className="text-black font-semibold mb-3">My location</h2>
             <Map center={coordinates}/>
         </div>
-        <hr/>
-        <div className="text-xl font-semibold flex flex-col col-span-3 border-2 rounded-md shadow-md p-2 bg-white border-blue-500 ">
-        Contact Info
-        {currentUser ? (<div className="flex flex-col col-span-3 mt-2 pt-2 ">
-        <div className="flex flex-row gap-2 justify-start"><BsFilePerson/> {artistFirstName} {artistLastName}</div>
     
-        <div className="flex flex-row gap-2 justify-start"><BiLogoWhatsapp/>{phone}</div>
-            
+        
 
-
-        </div>):(<div className="pt-2"><Button onClick={loginModal.onOpen} label="Sign In for Artist contact info"/></div>)}
-        </div>
 
         
     </div>

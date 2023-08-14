@@ -114,7 +114,7 @@ interface UserMenuProps{
               <>
               <MenuItem 
                 label="My listings" 
-                onClick={()=>{}}
+                onClick={()=>router.push("/myListings")}
               />
               <MenuItem 
                 label="My Favourites" 
