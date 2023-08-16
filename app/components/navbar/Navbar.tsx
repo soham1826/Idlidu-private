@@ -6,7 +6,7 @@ import Search from "./Search";
 import UserMenu from "./UserMenu";
 import { SafeUser } from "@/app/types";
 import Categories from "./Categories";
-import SearchNew from "./SearchNew";
+
 
 interface NavbarProps {
   currentUser?: SafeUser | null;
