@@ -12,6 +12,8 @@ import getListingBySearch,{ISearchParams} from "../actions/getListingBySearch";
 import { SafeUser } from "../types";
 import Heading from "../components/Heading";
 
+export const dynamic = 'force-dynamic'
+
 interface SearchProps{
   searchParams:ISearchParams
 }
