@@ -183,7 +183,7 @@ const RentModal =()=>{
     if(step === STEPS.DESCRIPTION){
         bodyContent=(
             <div className="flex flex-col gap-8">
-                <Heading title="Discribe your speciality" subtitle="let customers know you more !"/>
+                <Heading title="Describe your speciality" subtitle="let customers know you more !"/>
             <Input id="title" label="Title" disabled={isLoading} register={register} errors={errors} required/>
             <hr/>
             <Input id="description" label="Description" disabled={isLoading} register={register} errors={errors} required/>

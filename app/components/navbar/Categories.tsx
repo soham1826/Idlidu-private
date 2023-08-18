@@ -39,7 +39,7 @@ export const categories = [
   {
     label: "Tabla",
     icon: FaDrumSteelpan,
-    description: "These Are Table Artists",
+    description: "These Are Tabla Artists",
   },
   {
     label: "Magician",
@@ -59,7 +59,7 @@ export const categories = [
   {
     label: "Drums",
     icon: LiaDrumSolid,
-    description: "These are Drums Artist",
+    description: "These are Drum Artist",
   },
   {
     label: "Vocalist",
@@ -100,7 +100,7 @@ export const categories = [
   {
     label: "Others",
     icon: GiCircularSawblade,
-    description: "These are Food artists",
+    description: "These Perform some Rare arts",
   },
 ];
 
