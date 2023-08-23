@@ -6,7 +6,8 @@ export default async function getListingBySearch(params:ISearchParams){
     try{
         const{q} = params;
         console.log(params);
-        const response = await fetch(`https://idlidu-ten.vercel.app/api/search?q=${params.q}`,{
+        const response = await fetch(`
+        http://localhost:3000/api/search?q=${params.q}`,{
             method:"GET",
             headers:{
               'Content-Type':'application/json'
@@ -19,3 +20,6 @@ export default async function getListingBySearch(params:ISearchParams){
         console.log(err)
     }
 }
+
+
+// https://idlidu-ten.vercel.app/api/search?q=${params.q}

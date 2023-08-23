@@ -9,7 +9,7 @@ import { useCallback, useMemo } from "react";
 import HeartButton from "../HeartButton";
 import prisma from "@/app/libs/prismadb"
 import Button from "../Button";
-import { BiFace } from "react-icons/bi";
+import { BiFace, BiLocationPlus } from "react-icons/bi";
 import { BsFillPersonBadgeFill, BsPersonCircle } from "react-icons/bs";
 
 interface ListingCardProps {
@@ -62,7 +62,9 @@ const ListingCard:React.FC<ListingCardProps> = ({data,onAction,disabled,actionLa
 
             </div>
             <div className="font-bold text-lg text-blue-500 pl-2">{data.title}</div>
-            <div className="font-semibold text-lg pl-2">{location?.region} , {location?.label}</div>
+            <div className="font-semibold text-md p-3 flex flex-row items-center">
+              <BiLocationPlus/>
+              {data.city},{data.state}</div>
             <div className="font-semibold text-lg text-slate-400 pl-2 flex flex-row gap-2 items-center">
               <BsPersonCircle/>{data.artistFirstName} {data.artistLastName}</div>
             <div className="font-semibold text-lg my-2 p-2 bg-slate-200 rounded-md">₹ {data.price}/Hour</div>

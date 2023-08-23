@@ -20,6 +20,9 @@ export async function POST(request: Request) {
     phoneNo,
     artistFirstName,
     artistLastName,
+    city,
+    state,
+    pincode
   } = body;
 
   const listen = await prisma.listing.create({
@@ -34,6 +37,9 @@ export async function POST(request: Request) {
       artistFirstName,
       artistLastName,
       userId: currentUser.id,
+      city,
+      state,
+      pincode
     },
   });
 

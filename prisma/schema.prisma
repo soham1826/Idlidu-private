@@ -59,6 +59,9 @@ model Listing{
   category  String
   locationValue String
   phoneNo String
+  pincode String?
+  state String?
+  city String?
   price Int
   userId String @db.ObjectId
 

@@ -53,6 +53,27 @@ export async function GET(request:Request){
                         }
 
                     },
+                    {
+                        city:{
+                            contains:query,
+                            mode:"insensitive"
+                        }
+
+                    },
+                    {
+                        state:{
+                            contains:query,
+                            mode:"insensitive"
+                        }
+
+                    },
+                    {
+                        pincode:{
+                            contains:query,
+                            mode:"insensitive"
+                        }
+
+                    }
                     
                 ]
                 

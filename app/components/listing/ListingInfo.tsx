@@ -54,7 +54,7 @@ const ListingInfo:React.FC<ListingInfoProps>= ({
         </div>
         <hr/>
         <div className=" text-lg flex flex-col">
-            <h2 className="text-black font-semibold mb-3">My location</h2>
+            <h2 className="text-black font-semibold mb-3">My Country location</h2>
             <Map center={coordinates}/>
         </div>
     

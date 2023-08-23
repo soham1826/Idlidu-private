@@ -54,7 +54,10 @@ const RentModal =()=>{
             artistFirstName:"",
             artistLastName:"",
             description:"",
-            skills:""
+            skills:"",
+            state:"",
+            city:"",
+            pincode:""
 
         }
     })
@@ -151,7 +154,7 @@ const RentModal =()=>{
         bodyContent=(
             <div className="flex flex-col gap-8">
                 <Heading
-                title="Where are you located ?"
+                title="In which country are you located ?"
                 subtitle="Helps customer to find you"
                 />
                 <CountrySelect 
@@ -183,7 +186,7 @@ const RentModal =()=>{
     if(step === STEPS.DESCRIPTION){
         bodyContent=(
             <div className="flex flex-col gap-8">
-                <Heading title="Describe your speciality" subtitle="let customers know you more !"/>
+                <Heading title="Give listing a Title and describe your speciality" subtitle="let customers know you more !"/>
             <Input id="title" label="Title" disabled={isLoading} register={register} errors={errors} required/>
             <hr/>
             <Input id="description" label="Description" disabled={isLoading} register={register} errors={errors} required/>
@@ -207,8 +210,10 @@ const RentModal =()=>{
                 <Heading title="Your Contact info" subtitle="Makes Customers to contact you effortlessly"/>
             <Input id="artistFirstName" label="First Name" disabled={isLoading} register={register} errors={errors} required/>
             <Input id="artistLastName" label="Last Name" disabled={isLoading} register={register} errors={errors} required/>
-            
             <Input id="phoneNo" label="Phone No" disabled={isLoading} register={register} errors={errors} required/>
+            <Input id="state" label="State" disabled={isLoading} register={register} errors={errors} required/>
+            <Input id="city" label="City" disabled={isLoading} register={register} errors={errors} required/>
+            <Input id="pincode" label="Pincode" disabled={isLoading} register={register} errors={errors} required/>
 
             </div>
         )
