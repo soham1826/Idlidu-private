@@ -31,21 +31,21 @@ export const categories = [
     icon: TbMusic,
     description: "These are Singers",
   },
-  {
-    label: "Mehendi Artist",
-    icon: GiOpenPalm,
-    description: "These are Mehendi Artists",
-  },
+  // {
+  //   label: "Mehendi Artist",
+  //   icon: GiOpenPalm,
+  //   description: "These are Mehendi Artists",
+  // },
   {
     label: "Tabla",
     icon: FaDrumSteelpan,
     description: "These Are Tabla Artists",
   },
-  {
-    label: "Magician",
-    icon: BsMagic,
-    description: "These are magicians",
-  },
+  // {
+  //   label: "Magician",
+  //   icon: BsMagic,
+  //   description: "These are magicians",
+  // },
   {
     label: "Sitar",
     icon: GiGuitarBassHead,
@@ -81,21 +81,21 @@ export const categories = [
     icon: BsMusicPlayerFill,
     description: "These are Disc Jockeys",
   },
-  {
-    label: "Rangoli Artist",
-    icon: LiaCreativeCommonsSampling,
-    description: "These are Rangoli Artists",
-  },
-  {
-    label: "Dancer",
-    icon: GiHeartInside,
-    description: "These are Dancers",
-  },
-  {
-    label: "Food art",
-    icon: IoFastFood,
-    description: "These are Food artists",
-  },
+  // {
+  //   label: "Rangoli Artist",
+  //   icon: LiaCreativeCommonsSampling,
+  //   description: "These are Rangoli Artists",
+  // },
+  // {
+  //   label: "Dancer",
+  //   icon: GiHeartInside,
+  //   description: "These are Dancers",
+  // },
+  // {
+  //   label: "Food art",
+  //   icon: IoFastFood,
+  //   description: "These are Food artists",
+  // },
 
   {
     label: "Others",
