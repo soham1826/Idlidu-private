@@ -24,20 +24,20 @@ interface ArtistsProps
     {
       title: "Get Discovered",
       description: "Give your art recognition it deserved.",
-      header: <Image className="flex object-cover w-full h-full min-h-[6rem] rounded-xl " src="/assets/Social.jpeg" alt="global" width={300} height={300}/>,
+      header: <Image className="flex object-cover w-full h-full min-h-[6rem] rounded-xl " src="/assets/Social.jpeg" alt="discovered" width={300} height={300}/>,
       className: "md:col-span-1",
     },
     {
       title: "Your Schedule",
       description: "Perform on the time and dates according to you.",
-      header: <Image className="flex object-cover w-full h-full min-h-[6rem] rounded-xl " src="/assets/calender.jpeg" alt="global" width={300} height={300}/>,
+      header: <Image className="flex object-cover w-full h-full min-h-[6rem] rounded-xl " src="/assets/calender.jpeg" alt="schedule" width={300} height={300}/>,
       className: "md:col-span-1",
     },
     {
       title: "Your art your price",
       description:
         "Pick the price that your art deserves.",
-      header: <Image className="flex object-cover w-full h-full min-h-[6rem] rounded-xl " src="/assets/deal.jpeg" alt="global" width={300} height={300}/>,
+      header: <Image className="flex object-cover w-full h-full min-h-[6rem] rounded-xl " src="/assets/deal.jpeg" alt="price" width={300} height={300}/>,
       className: "md:col-span-2",
     },
   ];
