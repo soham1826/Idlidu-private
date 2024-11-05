@@ -37,7 +37,7 @@ interface ArtistsProps
       title: "Your art your price",
       description:
         "Pick the price that your art deserves.",
-      header: <Image className="flex object-cover w-full h-full min-h-[6rem] rounded-xl " src="/assets/deal.jpeg" alt="global" width={300} height={300}/>,
+      header: <Image className="flex object-cover w-full h-full min-h-[6rem] rounded-xl " src="/assets/handshake.jpeg" alt="global" width={300} height={300}/>,
       className: "md:col-span-2",
     },
   ];
