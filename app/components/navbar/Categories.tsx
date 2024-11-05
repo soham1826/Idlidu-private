@@ -111,7 +111,7 @@ function Categories({}: Props) {
   const category = params?.get("category");
   const pathname = usePathname();
 
-  const isMainPage = pathname === "/";
+  const isMainPage = pathname === "/explore";
 
   if (!isMainPage) {
     return null;

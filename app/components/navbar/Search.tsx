@@ -1,11 +1,17 @@
 "use client"
 import useSearchModal from "@/app/hooks/useSearchModal"
+import { usePathname } from "next/navigation";
 import { use, useEffect, useState } from "react";
 import {BiSearch} from "react-icons/bi"
 
 const Search = () => {
   const searchModal = useSearchModal();
+  const pathname = usePathname();
   const [placeholder ,setPlaceholder]= useState("Search")
+
+  if(pathname == "/"){
+    return <></>
+  }
   return (
 <div onClick={searchModal.onOpen} className="border-[1px] w-full md:w-1/4 py-2 rounded-full shadow-sm hover:shadow-md transition cursor-pointer">
     <div 

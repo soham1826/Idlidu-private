@@ -8,11 +8,15 @@ import { SafeUser } from "@/app/types";
 import Categories from "./Categories";
 
 
+
 interface NavbarProps {
   currentUser?: SafeUser | null;
 }
 
 const Navbar:React.FC<NavbarProps> = ({currentUser}) => {
+
+
+
   return ( 
     <div className="fixed w-full bg-white z-10 shadow-sm sm:mb-6">
       <div
@@ -33,7 +37,8 @@ const Navbar:React.FC<NavbarProps> = ({currentUser}) => {
           "
         >
           <Logo />
-          <Search />
+          <Search/>
+          
           {/* <SearchNew/> */}
           <UserMenu currentUser={currentUser}/>
         </div>

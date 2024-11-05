@@ -54,6 +54,13 @@ export const authOptions: AuthOptions = {
   pages: {
     signIn: '/',
   },
+  callbacks:{
+    async redirect({ url, baseUrl }) {
+      // If a custom URL is provided (like the URL the user was trying to access), use it
+      // Otherwise, default to the base URL
+      return url.startsWith(baseUrl) ? url : baseUrl;
+    },
+  },
   debug: process.env.NODE_ENV === 'development',
   session: {
     strategy: "jwt",

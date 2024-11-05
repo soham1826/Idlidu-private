@@ -98,13 +98,13 @@ function RegisterModal({}: Props) {
         icon={FcGoogle}
         onClick={() => signIn("google")}
       />
-      <Button
+      {/* <Button
         outline
         label="Continue with Facebook"
         icon={AiFillFacebook}
         onClick={() => signIn("facebook")}
 
-      />
+      /> */}
       <div className="text-neutral-500 text-center mt-4 font-light">
         <div>
           Already have an account?{" "}

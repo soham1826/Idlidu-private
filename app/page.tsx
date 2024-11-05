@@ -1,43 +1,66 @@
+import { BorderBeam } from "@/components/ui/border-beam";
+import { Calendar } from "@/components/ui/calendar";
 import Container from "./components/Container";
-import EmptyState from "./components/EmptyState";
-import getListings, { IListingsParams } from "./actions/getListings";
-import ClientOnly from "./components/ClientOnly";
-import ListingCard from "./components/listing/ListingCard";
+import Marquee from "@/components/ui/marquee";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import {
+  BellIcon,
+  CalendarIcon,
+  FileTextIcon,
+  GlobeIcon,
+  InputIcon,
+} from "@radix-ui/react-icons";
+import { BentoGrid,BentoGridItem } from "@/components/ui/bento-grid";
+import Footer from "./components/Footer";
+import Hero from "./components/Landing/Hero";
 import getCurrentUser from "./actions/getCurrentUser";
+import SpecialMoments from "./components/Landing/SpecialMoments";
+import Artists from "./components/Landing/Artists";
 
-export const dynamic = 'force-dynamic'
 
-interface HomeProps{
-  searchParams:IListingsParams
-}
 
-const Home  = async({searchParams}:HomeProps) =>{
-  const listings = await getListings(searchParams);
+const Skeleton = () => (
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
+);
+const features = [
+  {
+    title: "Go global",
+    description: "Don't let boundries stop your inner artist.",
+    header: <Skeleton />,
+    className: "md:col-span-2",
+  },
+  {
+    title: "Get Discovered",
+    description: "Give your art recognition it deserved.",
+    header: <Skeleton />,
+    className: "md:col-span-1",
+  },
+  {
+    title: "Your Schedule",
+    description: "Perform on the time and dates according to you.",
+    header: <Skeleton />,
+    className: "md:col-span-1",
+  },
+  {
+    title: "Your art your price",
+    description:
+      "Pick the price that your art deserves.",
+    header: <Skeleton />,
+    className: "md:col-span-2",
+  },
+];
+
+
+
+export default  async function LandingPage() {
+
   const currentUser = await getCurrentUser();
-
-  if(listings.length === 0){ 
-    return (<ClientOnly>
-      <EmptyState showReset/>
-      </ClientOnly>)
-  }
-  return(
-    <ClientOnly>
-      <Container>
-      <div className="pt-[180px] lg:pt-[6rem] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-6 gap-8">
-        {listings.map((listing:any)=>{
-          return(
-            <ListingCard key={listing.id} data={listing} currentUser={currentUser} />)
-        })}
-
-      </div>
-    </Container>
-
-    </ClientOnly>
-     
-  )
-  }
-
-  export default Home;
-
-   
-  
+  return (
+    <div className="flex flex-col w-full h-full">
+      <Hero currentUser={currentUser}/>
+      <SpecialMoments currentUser={currentUser}/>
+      <Artists currentUser={currentUser}/>
+    </div>
+  );
+}
