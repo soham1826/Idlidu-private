@@ -32,7 +32,7 @@ function EmptyState({
           <Button
             outline
             label="Remove all filters"
-            onClick={() => router.push("/explore")}
+            onClick={() => router.push("/")}
           />
         )}
       </div>
