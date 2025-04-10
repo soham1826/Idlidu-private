@@ -6,6 +6,10 @@ import useRentModal from "@/app/hooks/useRentModal"
 import useLoginModal from "@/app/hooks/useLoginModal"
 import { useCallback } from "react"
 import Image from "next/image"
+import globalPic from "../../../public/assets/globe.jpeg"
+import socialPic from "../../../public/assets/social.jpeg"
+import handshakePic from "../../../public/assets/handshake.jpeg"
+import callenderPic from "../../../public/assets/calender.jpeg"
 interface ArtistsProps
 {
     currentUser?: SafeUser | null
@@ -18,26 +22,26 @@ interface ArtistsProps
     {
       title: "Go global",
       description: "Don't let boundries stop your inner artist.",
-      header: <Image className="flex object-cover w-full h-full min-h-[6rem] rounded-xl " src="/assets/globe.jpeg" alt="global" width={300} height={300}/>,
+      header: <Image className="flex object-cover w-full h-full min-h-[6rem] rounded-xl " src={globalPic} alt="global" width={300} height={300}/>,
       className: "md:col-span-2",
     },
     {
       title: "Get Discovered",
       description: "Give your art recognition it deserved.",
-      header: <Image className="flex object-cover w-full h-full min-h-[6rem] rounded-xl " src="/assets/Social.jpeg" alt="global" width={300} height={300}/>,
+      header: <Image className="flex object-cover w-full h-full min-h-[6rem] rounded-xl " src={socialPic} alt="global" width={300} height={300}/>,
       className: "md:col-span-1",
     },
     {
       title: "Your Schedule",
       description: "Perform on the time and dates according to you.",
-      header: <Image className="flex object-cover w-full h-full min-h-[6rem] rounded-xl " src="/assets/calender.jpeg" alt="global" width={300} height={300}/>,
+      header: <Image className="flex object-cover w-full h-full min-h-[6rem] rounded-xl " src={callenderPic} alt="global" width={300} height={300}/>,
       className: "md:col-span-1",
     },
     {
       title: "Your art your price",
       description:
         "Pick the price that your art deserves.",
-      header: <Image className="flex object-cover w-full h-full min-h-[6rem] rounded-xl " src="/assets/handshake.jpeg" alt="global" width={300} height={300}/>,
+      header: <Image className="flex object-cover w-full h-full min-h-[6rem] rounded-xl " src={handshakePic} alt="handshake" width={300} height={300}/>,
       className: "md:col-span-2",
     },
   ];
@@ -63,7 +67,7 @@ const Artists:React.FC<ArtistsProps> = ({currentUser})  => {
           </span>
         </h1>
         <p className=" text-xl md:text-2xl font-semibold my-4 text-gray-400">
-          Here&apos;s why you should become and Idlidu artist
+          Here&apos;s why you should become an Idlidu artist
         </p>
 
       <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
